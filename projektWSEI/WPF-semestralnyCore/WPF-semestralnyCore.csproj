@@ -1,0 +1,61 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <RootNamespace>WPF_semestralnyCore</RootNamespace>
+    <UseWPF>true</UseWPF>
+	  <ApplicationIcon>images\logo.ico</ApplicationIcon>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ConnectDataBase\ConnectDataBase.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Images\backgroundmain.jpeg" />
+    <Resource Include="Images\backgroundsprzet.jpg" />
+    <Resource Include="Images\backgroundstaff.jpg" />
+    <Resource Include="Images\backgroundtrasa.jpg" />
+	<Resource Include="Images\logo.ico" /> 
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Dashboard.xaml.cs">
+      <DependentUpon>Dashboard.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Items.xaml.cs">
+      <DependentUpon>Items.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="LoginWindow.xaml.cs">
+      <SubType>Code</SubType>
+      <DependentUpon>LoginWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Performances.xaml.cs">
+      <DependentUpon>Performances.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Staff.xaml.cs">
+      <DependentUpon>Staff.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Page Update="Dashboard.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Items.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="LoginWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Update="Performances.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Staff.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+
+</Project>
